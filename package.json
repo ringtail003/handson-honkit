@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "honkit": "honkit",
+    "honkit:serve": "npm run honkit serve",
+    "honkit:build": "npm run honkit build ./ --log=debug --debug",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
