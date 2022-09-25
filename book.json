@@ -1,4 +1,5 @@
 {
   "root": "./docs",
-  "title": "handson-honkit"
+  "title": "handson-honkit",
+  "plugins": ["-lunr", "-search", "@dogatana/honkit-plugin-search-plus"]
 }
