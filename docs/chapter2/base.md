@@ -7,3 +7,7 @@
 {% block contents %}
 コンテンツ
 {% endblock %}
+
+{% block keywords %}
+{{ page.search.keywords }}
+{% endblock %}
