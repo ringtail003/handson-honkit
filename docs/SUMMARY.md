@@ -1,14 +1,15 @@
-# Summary
+## セットアップ
 
-## hoge
+- [PC要件](chapter1/1-1.md)
+- [インストール](chapter1/1-2.md)
+- [ログイン](chapter1/1-3.md)
 
-## 宮沢賢治
+## 使い方
 
-- [注文の多い料理店](chapter1/1-1.md)
-- [よだかの星](chapter1/1-2.md)
-- [銀河鉄道の夜](chapter1/1-3.md)
+- [チャット機能](chapter2/2-1.md)
+- [グループチャット](chapter2/2-2.md)
 
-## 太宰治
+## 料金について
 
-- [人間失格](chapter2/2-1.md)
-- [女生徒](chapter2/2-2.md)
+- 料金表
+- 支払い

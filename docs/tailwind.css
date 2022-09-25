@@ -6,11 +6,25 @@
   p {
     margin: 0 !important;
   }
+
+  .markdown-section a:hover {
+    text-decoration: none;
+  }
 }
 
 @layer components {
   .tag {
     @apply border border-gray-500;
     @apply p-1 rounded-lg;
+  }
+
+  .breadcrumbs {
+    @apply text-gray-500;
+  }
+  .breadcrumbs a {
+    @apply text-gray-500;
+  }
+  .breadcrumbs a:hover {
+    @apply text-gray-600 underline;
   }
 }

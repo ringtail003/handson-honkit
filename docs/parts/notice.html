@@ -1,5 +1,6 @@
-{% import "../icons/note.html" as icon %} {% macro
-render(title="",description="") %}
+{% import "../icons/note.html" as icon %}
+
+{%- macro render(title="",description="") %}
 <div class="border border-gray-200 shadow-sm p-8 rounded-md">
   <div class="flex items-center gap-4">
     <div class="p-3 bg-blue-50 rounded-[50%]">
@@ -11,4 +12,4 @@ render(title="",description="") %}
     </div>
   </div>
 </div>
-{% endmacro %}
+{%- endmacro %}
