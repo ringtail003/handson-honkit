@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  p {
+    margin: 0 !important;
+  }
+}
+
 @layer components {
   .tag {
     @apply border border-gray-500;

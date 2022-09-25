@@ -1,21 +1,12 @@
-<link rel="stylesheet" href="../dist.css" />
-<link rel="stylesheet" href="../styles.css" />
-
-{% block bookTitle %}
+{% import "./parts/notice.html" as notice %} {% block bookTitle %}
 <h1 class="text-lg text-red-300">bookベース</h1>
-{% endblock %}
+{% endblock %} {% block pageTitle %} {% endblock %} {% block contents %}
+コンテンツ {% endblock %} {% block foobar %} {% endblock %} {% block keywords %}
+{%- for keyword in page.search.keywords -%}
+<span class="tag">{{ keyword }}</span>
+{%- endfor -%} {% endblock %}
 
-{% block pageTitle %}
-{% endblock %}
-
-
-{% block contents %} コンテンツ {% endblock %}
-
-{% block foobar %}
-{% endblock %}
-
-{% block keywords %}
-  {%- for keyword in page.search.keywords -%}
-    <span class="tag">{{ keyword }}</span>
-  {%- endfor -%}
-{% endblock %}
+<div class="grid grid-cols-2 gap-8">
+  {{- notice.render("新着情報", "最近の投稿をチェックしたい") -}} {{-
+  notice.render("活用ガイド", "活用方法や関連情報を知りたい") -}}
+</div>

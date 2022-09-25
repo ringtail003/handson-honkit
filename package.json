@@ -8,7 +8,7 @@
     "honkit:serve": "npm run honkit serve",
     "honkit:build": "npm run tailwind:build && npm run honkit build ./ --log=debug --debug",
     "tailwind": "tailwindcss",
-    "tailwind:build": "npm run tailwind -- --input=./docs/styles.css --output=./docs/dist.css",
+    "tailwind:build": "npm run tailwind -- --input=./docs/tailwind.css --output=./docs/dist.css",
     "tailwind:serve": "npm run tailwind:build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,8 @@
 {
   "root": "./docs",
   "title": "handson-honkit",
-  "plugins": ["-lunr", "-search", "@dogatana/honkit-plugin-search-plus"]
+  "plugins": ["-lunr", "-search", "@dogatana/honkit-plugin-search-plus"],
+  "styles": {
+    "website": "./dist.css"
+  }
 }
