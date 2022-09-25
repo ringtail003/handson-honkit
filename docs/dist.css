@@ -551,22 +551,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.tag {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
 .block {
   display: block;
 }
 
 .contents {
   display: contents;
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-gray-100 {

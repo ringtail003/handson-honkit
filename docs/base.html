@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="../dist.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+{% block bookTitle %}
+<h1 class="text-lg text-red-300">bookベース</h1>
+{% endblock %}
+
+{% block pageTitle %}
+{% endblock %}
+
+
+{% block contents %} コンテンツ {% endblock %}
+
+{% block foobar %}
+{% endblock %}
+
+{% block keywords %}
+  {%- for keyword in page.search.keywords -%}
+    <span class="tag">{{ keyword }}</span>
+  {%- endfor -%}
+{% endblock %}

@@ -1,13 +1,9 @@
-<link rel="stylesheet" href="../dist.css" />
+{% extends "../base.html" %}
 
-{% block title %}
+{% block pageTitle %}
 <h1 class="text-lg text-red-300">太宰治</h1>
 {% endblock %}
 
 {% block contents %}
 コンテンツ
-{% endblock %}
-
-{% block keywords %}
-{{ page.search.keywords }}
 {% endblock %}
