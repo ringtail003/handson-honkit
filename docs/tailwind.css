@@ -6,10 +6,6 @@
   p {
     margin: 0 !important;
   }
-
-  .markdown-section a:hover {
-    text-decoration: none;
-  }
 }
 
 @layer components {
@@ -19,12 +15,25 @@
   }
 
   .breadcrumbs {
-    @apply text-gray-500;
+    @apply text-gray-500 flex gap-4 items-center text-sm;
   }
   .breadcrumbs a {
     @apply text-gray-500;
   }
   .breadcrumbs a:hover {
+    @apply text-gray-600 underline;
+  }
+  .breadcrumbs .icon {
+    @apply h-8 w-8 text-gray-400;
+  }
+
+  .guide:hover {
+    @apply border-gray-300;
+  }
+  .guide a {
+    @apply text-gray-500;
+  }
+  .guide a:hover {
     @apply text-gray-600 underline;
   }
 }

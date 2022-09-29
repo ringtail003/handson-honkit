@@ -1,12 +1,12 @@
 {% import "../parts/tag.html" as tag %}
 {% import "../icons/chevron-right.html" as chevronRightIcon %}
 
-<nav class="flex gap-4 items-center text-sm breadcrumbs">
+<nav class="breadcrumbs">
   {%- block breadcrumbs %}
     <a href="/">トップ</a>
-    <div class="h-8 w-8 text-gray-400">{{- chevronRightIcon.render() }}</div>
+    <div class="icon">{{- chevronRightIcon.render() }}</div>
     <a href="/chapter2/2-1.html">使い方</a>
-    <div class="h-8 w-8 text-gray-400">{{- chevronRightIcon.render() }}</div>
+    <div class="icon">{{- chevronRightIcon.render() }}</div>
   {%- endblock %}
 </nav>
 
