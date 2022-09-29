@@ -31,9 +31,9 @@
     @apply border-gray-300;
   }
   .guide a {
-    @apply text-gray-500;
+    @apply text-gray-600;
   }
   .guide a:hover {
-    @apply text-gray-600 underline;
+    @apply text-gray-700 underline;
   }
 }
