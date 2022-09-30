@@ -2,8 +2,21 @@
 
 {% block book_inner %}
   {{ super() }}
-  <footer class="flex flex-col gap-2 justify-center items-center py-10 text-gray-400 text-xs">
-    <img src="{{ ('/images/logo.svg')|resolveFile }}" alt="logo" class="w-16 h-16">
-    <div>Copyright(c) 2022</div>
+  <footer class="fixed bottom-0 right-0">
+    <form class="bg-blue-100 px-10 w-full flex justify-end items-center h-[110px] rounded-md focus-within:bg-blue-200">
+      <div class="flex justify-start items-center">
+        <input type="search" 
+          id="app-query"
+          name="q"
+          accesskey="/"
+          class="border border-gray-400 py-2 pl-12 pr-4 rounded-md outline-none w-[400px]"
+          placeholder="何かお探しですか？"
+        >
+        <img src="https://icongr.am/octicons/search.svg?size=16&color=9CA3AF"
+          alt=""
+          class="absolute ml-4"
+        >
+      </div>
+    </form>
   </footer>
 {% endblock %}

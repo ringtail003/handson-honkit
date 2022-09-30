@@ -1,9 +1,5 @@
 {% import "./parts/guide.html" as guide %}
 
-<nav class="breadcrumbs">
-  <span>トップ</span>
-</nav>
-
 # このサイトについて
 
 架空アプリのサポートサイトです。

@@ -13,4 +13,9 @@ module.exports = {
     }
   },
   plugins: [],
+  safelist: [
+    { pattern: /book-summary(.*)/ },
+    { pattern: /book-body(.*)/ },
+    { pattern: /search-highlight-keyword(.*)/ },
+  ]
 }

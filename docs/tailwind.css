@@ -9,8 +9,41 @@
 }
 
 @layer components {
+  .book-body {
+    @apply mb-[110px];
+  }
+
+  .book-summary {
+    @apply bg-white p-10;
+  }
+  .book-summary #book-search-input {
+    @apply hidden;
+  }
+  .book-summary ul.summary li:focus-within {
+    @apply ring-2 ring-inset ring-blue-200;
+  }
+  .book-summary ul.summary li {
+    @apply rounded-md;
+  }
+  .book-summary ul.summary li.header {
+    @apply font-semibold text-gray-600;
+  }
+  .book-summary ul.summary li.chapter:not([data-level^="1."]) {
+    @apply pl-6;
+  }
+  .book-summary ul.summary li.active {
+    @apply bg-blue-50;
+  }
+  .book-summary ul.summary li.active a {
+    @apply text-blue-700;
+  }
+
+  .search-highlight-keyword {
+    background: #EFF6FF !important;
+  }
+
   .breadcrumbs {
-    @apply text-gray-500 flex gap-4 items-center text-sm;
+    @apply text-gray-500 flex gap-2 items-center text-sm;
   }
   .breadcrumbs a {
     @apply text-gray-500;

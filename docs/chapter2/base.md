@@ -1,4 +1,3 @@
-{% import "../parts/tag.html" as tag %}
 {% import "../icons/chevron-right.html" as chevronRightIcon %}
 
 <nav class="breadcrumbs">
