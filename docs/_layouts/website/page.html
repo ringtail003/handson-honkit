@@ -1,0 +1,9 @@
+{% extends template.self %}
+
+{% block book_inner %}
+  {{ super() }}
+  <footer class="flex flex-col gap-2 justify-center items-center py-10 text-gray-400 text-xs">
+    <img src="{{ ('/images/logo.svg')|resolveFile }}" alt="logo" class="w-16 h-16">
+    <div>Copyright(c) 2022</div>
+  </footer>
+{% endblock %}
