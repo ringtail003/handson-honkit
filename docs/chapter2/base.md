@@ -16,19 +16,3 @@
 
 {% block contents %}
 {% endblock %}
-
-<hr>
-
-{% block keywords %}
-  <div class="my-14">
-    <div class="text-lg font-bold mb-4">同じカテゴリの記事</div>
-    <div class="flex gap-2">
-      {% if page.search.keywords|length == 0 %}
-      ありません
-      {% endif %}
-      {%- for keyword in page.search.keywords -%}
-        {{- tag.render(keyword) -}}
-      {%- endfor -%}
-    </div>
-  </div>
-{% endblock %}

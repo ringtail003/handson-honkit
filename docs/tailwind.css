@@ -6,21 +6,9 @@
   p {
     margin: 0 !important;
   }
-
-  /* [role="main"] {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100vh;
-  } */
 }
 
 @layer components {
-  .tag {
-    @apply border border-gray-500;
-    @apply p-1 rounded-lg;
-  }
-
   .breadcrumbs {
     @apply text-gray-500 flex gap-4 items-center text-sm;
   }

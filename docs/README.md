@@ -36,9 +36,9 @@ git push origin {repository}
 ...
 ```
 
-## 関連リンク
+## もっと知りたい
 
-<div class="flex flex-col gap-8">
-  {{- guide.render("はじめてガイド", "/download/example.pdf", "初心者さん向けガイドです。") }}
-  {{- guide.render("リリースノート", "#", "機能アップデートや改善を見ることができます。") }}
+<div class="grid grid-cols-2 gap-8">
+  {{- guide.render("はじめてガイド", "#", "初心者さん向けガイドです。") }}
+  {{- guide.render("リリースノート", "#", "機能アップデートのお知らせです。") }}
 </div>
