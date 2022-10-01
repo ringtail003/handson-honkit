@@ -11,9 +11,12 @@
   {%- endblock %}
 </nav>
 
-<h1 class="text-2xl font-bold">
-  {{ page.title }}
-</h1>
+<div class="flex justify-between items-center">
+  <h1 class="text-2xl font-bold flex-1">{{ page.title }}</h1>
+  {% if page.updatedAt %}
+    <span class="text-xs whitespace-nowrap">更新日：{{ page.updatedAt }}</span>
+  {% endif %}
+</div>
 
 {% block contents %}
 {% endblock %}
