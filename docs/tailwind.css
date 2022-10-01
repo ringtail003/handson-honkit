@@ -10,7 +10,7 @@
 
 @layer components {
   .book-body {
-    @apply mb-[110px];
+    @apply mb-[120px];
   }
 
   .book-summary {

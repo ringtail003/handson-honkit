@@ -7,11 +7,12 @@
     <div class="icon">{{- chevronRightIcon.render() }}</div>
     <a href="/chapter1/1-1.html">セットアップ</a>
     <div class="icon">{{- chevronRightIcon.render() }}</div>
+    <span>{{ page.title }}</span>
   {%- endblock %}
 </nav>
 
 <h1 class="text-2xl font-bold">
-  {% block title %}{% endblock %}
+  {{ page.title }}
 </h1>
 
 {% block contents %}
