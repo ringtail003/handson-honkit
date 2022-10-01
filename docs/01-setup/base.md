@@ -5,7 +5,7 @@
   {%- block breadcrumbs %}
     <a href="/">トップ</a>
     <div class="icon">{{- chevronRightIcon.render() }}</div>
-    <a href="/chapter1/1-1.html">セットアップ</a>
+    <a href="/01-setup/1-1.html">セットアップ</a>
     <div class="icon">{{- chevronRightIcon.render() }}</div>
     <span>{{ page.title }}</span>
   {%- endblock %}

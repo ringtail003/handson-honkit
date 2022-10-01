@@ -4,7 +4,7 @@
   {%- block breadcrumbs %}
     <a href="/">トップ</a>
     <div class="icon">{{- chevronRightIcon.render() }}</div>
-    <a href="/chapter2/2-1.html">使い方</a>
+    <a href="/02-customize/2-1.html">使い方</a>
     <div class="icon">{{- chevronRightIcon.render() }}</div>
   {%- endblock %}
 </nav>
