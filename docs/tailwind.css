@@ -4,7 +4,7 @@
 
 @layer base {
   p {
-    margin: 0 !important;
+    @apply m-0 !important;
   }
 }
 
@@ -34,8 +34,11 @@
   .book-summary ul.summary li.active {
     @apply bg-blue-50;
   }
+  .book-summary ul.summary li a {
+    @apply text-gray-600;
+  }
   .book-summary ul.summary li.active a {
-    @apply text-blue-700;
+    @apply text-blue-600;
   }
 
   .search-highlight-keyword {
@@ -63,5 +66,12 @@
   }
   .guide a:hover {
     @apply text-gray-700 underline;
+  }
+
+  .faq a {
+    @apply text-blue-600;
+  }
+  .faq a:hover {
+    @apply text-blue-700 underline;
   }
 }
