@@ -2,14 +2,15 @@
 
 {% block book_inner %}
   {{ super() }}
-  <footer class="fixed bottom-0 right-0 w-screen border-t border-gray-200 gap-12">
+  <footer class="fixed bottom-0 right-0 w-screen border-t border-gray-200 gap-12 shadow-[0_-1px_5px_1px_rgba(209,213,219,0.3)]">
     <div class="flex justify-end items-center">
-      <div class="flex items-center gap-2">
-        <div class="bg-gray-200 p-4 rounded-[50%]">
-          <img src="https://icongr.am/octicons/comment.svg?size=20&color=9ca3af" alt="">
+      <a class="flex items-center gap-2 text-gray-500 font-semibold hover:-translate-y-1 hover:underline transition focus:outline-none focus-visible:underline" 
+        href="/faq.html">
+        <div class="bg-gray-500 p-4 rounded-[50%]">
+          <img src="https://icongr.am/octicons/comment.svg?size=20&color=ffffff" alt="">
         </div>
-        <a class="text-gray-500 hover:text-gray-600 hover:underline" href="/faq.html">よくある質問</a>
-      </div>
+        <span class="">よくある質問</span>
+      </a>
 
       <form class="bg-white px-10 flex justify-end items-center h-[90px] rounded-md">
         <div class="flex justify-start items-center">

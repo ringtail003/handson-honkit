@@ -20,7 +20,7 @@
     @apply hidden;
   }
   .book-summary ul.summary li:focus-within {
-    @apply ring-2 ring-inset ring-blue-200;
+    @apply ring-2 ring-inset ring-blue-600;
   }
   .book-summary ul.summary li {
     @apply rounded-md;
@@ -32,13 +32,13 @@
     @apply pl-6;
   }
   .book-summary ul.summary li.active {
-    @apply bg-blue-50;
+    @apply bg-blue-700;
   }
   .book-summary ul.summary li a {
-    @apply text-gray-600;
+    @apply text-gray-700;
   }
   .book-summary ul.summary li.active a {
-    @apply text-blue-600;
+    @apply text-white font-semibold;
   }
 
   .search-highlight-keyword {
