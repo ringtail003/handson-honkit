@@ -1,0 +1,10 @@
+{% import "../icons/bulb.html" as icon %} 
+
+{%- macro render(description="") %}
+<div class="border-l-4 border-blue-900 px-8 py-4 tips my-4">
+  <div class="flex items-center gap-4">
+    <div class="h-10 w-10 text-blue-900">{{ icon.render() }}</div>
+    <div class="text-sm">{{ description }}</div>
+  </div>
+</div>
+{%- endmacro %}
