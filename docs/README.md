@@ -2,11 +2,11 @@
 
 # このサイトについて
 
-架空アプリのサポートサイトです。
+ブログやサポートサイトなどに使える「できるだけ簡単な記事公開の仕組み」が欲しいと思い [HonKit](https://honkit.netlify.app/setup.html) を使ってみました。セットアップや詰まったことなどをサポートサイトっぽくまとめています。
+<br><br>
+このサイト自身もHonKitで作っています。
 
-初期構築なしで手軽に記事を投稿できるサイトを作っています。
-
-## 記事の投稿手順
+## できあがった記事公開の手順
 
 ### ![](https://icongr.am/octicons/fold-down.svg?size=32&color=currentColor) クローン
 
@@ -18,6 +18,12 @@ git clone {repository}
 
 ```sh
 npm run honkit:serve
+```
+
+### ![](https://icongr.am/octicons/package.svg?size=32&color=currentColor) ビルド
+
+```sh
+npm run honkit:build
 ```
 
 ### ![](https://icongr.am/octicons/fold-up.svg?size=32&color=currentColor) プッシュ

@@ -1,5 +1,5 @@
 {
-  "name": "honkit",
+  "name": "handson-honkit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "honkit:serve": "npm run honkit serve",
     "honkit:build": "npm run tailwind:build && npm run honkit build ./ --log=debug --debug",
     "tailwind": "tailwindcss",
-    "tailwind:build": "npm run tailwind -- --input=./docs/tailwind.css --output=./docs/dist.css",
+    "tailwind:build": "npm run tailwind -- --input=./tailwind.css --output=./docs/dist.css",
     "tailwind:serve": "npm run tailwind:build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

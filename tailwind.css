@@ -6,6 +6,9 @@
   p {
     @apply m-0 !important;
   }
+  h2 {
+    @apply border-t-4 border-gray-800 pt-4;
+  }
 }
 
 @layer components {
@@ -82,5 +85,12 @@
   }
   .issue a:hover {
     @apply text-blue-700 underline;
+  }
+
+  .code-title {
+    @apply bg-blue-900 text-white py-2 p-6 rounded-tr-xl text-sm mt-10 block w-fit;
+  }
+  .code-title + pre {
+    @apply border-2 border-blue-900 bg-gray-200;
   }
 }
