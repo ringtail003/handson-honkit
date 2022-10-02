@@ -19,8 +19,8 @@
   .book-summary #book-search-input {
     @apply hidden;
   }
-  .book-summary ul.summary li:focus-within {
-    @apply ring-2 ring-inset ring-blue-600;
+  .book-summary ul.summary li a:focus {
+    @apply underline;
   }
   .book-summary ul.summary li {
     @apply rounded-md;
@@ -30,6 +30,15 @@
   }
   .book-summary ul.summary li.chapter:not([data-level^="1."]) {
     @apply pl-6;
+  }
+  .book-summary ul.summary li.chapter ul.articles {
+    @apply hidden;
+  }
+  .book-summary ul.summary li.chapter:has(.active) {
+    @apply bg-blue-700;
+  }
+  .book-summary ul.summary li.chapter:has(.active) a {
+    @apply text-white font-semibold;
   }
   .book-summary ul.summary li.active {
     @apply bg-blue-700;
@@ -68,10 +77,10 @@
     @apply text-gray-700 underline;
   }
 
-  .faq a {
+  .issue a {
     @apply text-blue-600;
   }
-  .faq a:hover {
+  .issue a:hover {
     @apply text-blue-700 underline;
   }
 }
