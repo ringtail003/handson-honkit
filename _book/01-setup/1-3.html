@@ -105,7 +105,7 @@
                 <a href="1-1.html">
             
                     
-                    環境
+                    開発環境
             
                 </a>
             
@@ -118,7 +118,7 @@
                 <a href="1-2.html">
             
                     
-                    インストール
+                    HonKitセットアップ
             
                 </a>
             
@@ -214,11 +214,44 @@
 
     
         
+        <li class="header">デプロイ</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../03-deploy/3-1.html">
+            
+                <a href="../03-deploy/3-1.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../03-deploy/3-2.html">
+            
+                <a href="../03-deploy/3-2.html">
+            
+                    
+                    Firebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">その他</li>
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../issue.html">
+        <li class="chapter " data-level="5.1" data-path="../issue.html">
             
                 <a href="../issue.html">
             
@@ -232,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.1" data-path="../03-issue/3-1.html">
+        <li class="chapter " data-level="5.1.1" data-path="../04-issue/4-1.html">
             
-                <a href="../03-issue/3-1.html">
+                <a href="../04-issue/4-1.html">
             
                     
                     tailwindcssのプリフライトが効かない
@@ -245,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.2" data-path="../03-issue/3-2.html">
+        <li class="chapter " data-level="5.1.2" data-path="../04-issue/4-2.html">
             
-                <a href="../03-issue/3-2.html">
+                <a href="../04-issue/4-2.html">
             
                     
                     サイドバーのIntroductionが消えない
@@ -258,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.3" data-path="../03-issue/3-3.html">
+        <li class="chapter " data-level="5.1.3" data-path="../04-issue/4-3.html">
             
-                <a href="../03-issue/3-3.html">
+                <a href="../04-issue/4-3.html">
             
                     
                     Nunjucksのコード補完がない
@@ -271,9 +304,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.4" data-path="../03-issue/3-4.html">
+        <li class="chapter " data-level="5.1.4" data-path="../04-issue/4-4.html">
             
-                <a href="../03-issue/3-4.html">
+                <a href="../04-issue/4-4.html">
             
                     
                     NunjucksをPrettierで整形すると崩れる
@@ -317,7 +350,7 @@
   <header>
     <div class="py-6 px-8 bg-gray-800 flex justify-between items-center border-b border-gray-200">
       <span class="font-bold text-white">HANDSON-HONKIT</span>
-      <a href="#" class="hover:bg-blue-800 focus:bg-blue-800 rounded-[50%]">
+      <a href="https://github.com/ringtail003/handson-honkit" class="hover:bg-blue-800 focus:bg-blue-800 rounded-[50%]">
         <img src="https://icongr.am/octicons/mark-github.svg?size=32&color=ffffff" alt="github">
       </a>
     </div>
@@ -367,7 +400,7 @@
 <div class="flex justify-between items-center">
   <h1 class="text-2xl font-bold flex-1" id="記事を追加">記事を追加</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
 
 </div>
 
@@ -375,7 +408,7 @@
 
 <p>記事を作成して何か書いてみます。</p>
 <p><br></p>
-<pre><code class="lang-sh">touch test.md
+<pre><code class="lang-shell">touch test.md
 </code></pre>
 <div class="code-title">test.md</div>
 
@@ -437,7 +470,11 @@
 </tbody>
 </table>
 <p><br>
-記事を追加して <code>SUMMARY.md</code> にリンクを貼るとサイドバーとメインコンテンツがよしなに生成される、という仕組みになっています。
+ビルトインサーバーを実行するとマークダウンがHTMLにパースされ <code>_book</code> フォルダに吐き出される仕組みになっています。</p>
+<p><br></p>
+<p>基本的な操作は「マークダウンを追加・編集する」と「記事リストにリンクを貼る」たった２つだけ。</p>
+<p><br></p>
+<p>GitHubでも慣れ親しんでいるマークダウンで簡単に記事が書けるのが魅力的です。
 <br></p>
 <div class="border-l-4 border-blue-900 px-8 py-4 tips my-4">
   <div class="flex items-center gap-4">
@@ -523,7 +560,7 @@
             name="q"
             accesskey="/"
             class="border border-gray-400 py-2 pl-12 pr-4 rounded-md outline-none w-[400px] focus:drop-shadow-md"
-            placeholder="何かお探しですか？"
+            placeholder="サイト内検索"
           >
           <img src="https://icongr.am/octicons/search.svg?size=16&color=9CA3AF"
             alt=""
@@ -538,7 +575,7 @@
 
             
                 
-                <a href="1-2.html" class="navigation navigation-prev " aria-label="Previous page: インストール">
+                <a href="1-2.html" class="navigation navigation-prev " aria-label="Previous page: HonKitセットアップ">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -554,7 +591,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"記事を追加","updatedAt":"2022/10/02","level":"2.3","depth":1,"next":{"title":"tailwindcss","level":"3.1","depth":1,"path":"02-customize/2-1.md","ref":"02-customize/2-1.md","articles":[]},"previous":{"title":"インストール","level":"2.2","depth":1,"path":"01-setup/1-2.md","ref":"01-setup/1-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"01-setup/1-3.md","mtime":"2022-10-02T09:54:11.944Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-02T12:11:37.582Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"記事を追加","updatedAt":"2022/10/03","level":"2.3","depth":1,"next":{"title":"tailwindcss","level":"3.1","depth":1,"path":"02-customize/2-1.md","ref":"02-customize/2-1.md","articles":[]},"previous":{"title":"HonKitセットアップ","level":"2.2","depth":1,"path":"01-setup/1-2.md","ref":"01-setup/1-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"01-setup/1-3.md","mtime":"2022-10-03T23:15:03.429Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-03T23:44:13.972Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -613,6 +650,10 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

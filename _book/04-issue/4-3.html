@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>tailwindcssのプリフライトが効かない · handson-honkit</title>
+        <title>Nunjucksのコード補完がない · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -48,10 +48,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3-2.html" />
+    <link rel="next" href="4-4.html" />
     
     
-    <link rel="prev" href="../issue.html" />
+    <link rel="prev" href="4-2.html" />
     
 
     </head>
@@ -105,7 +105,7 @@
                 <a href="../01-setup/1-1.html">
             
                     
-                    環境
+                    開発環境
             
                 </a>
             
@@ -118,7 +118,7 @@
                 <a href="../01-setup/1-2.html">
             
                     
-                    インストール
+                    HonKitセットアップ
             
                 </a>
             
@@ -214,11 +214,44 @@
 
     
         
+        <li class="header">デプロイ</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../03-deploy/3-1.html">
+            
+                <a href="../03-deploy/3-1.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../03-deploy/3-2.html">
+            
+                <a href="../03-deploy/3-2.html">
+            
+                    
+                    Firebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
         <li class="header">その他</li>
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../issue.html">
+        <li class="chapter " data-level="5.1" data-path="../issue.html">
             
                 <a href="../issue.html">
             
@@ -232,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1.1" data-path="3-1.html">
+        <li class="chapter " data-level="5.1.1" data-path="4-1.html">
             
-                <a href="3-1.html">
+                <a href="4-1.html">
             
                     
                     tailwindcssのプリフライトが効かない
@@ -245,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.2" data-path="3-2.html">
+        <li class="chapter " data-level="5.1.2" data-path="4-2.html">
             
-                <a href="3-2.html">
+                <a href="4-2.html">
             
                     
                     サイドバーのIntroductionが消えない
@@ -258,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.3" data-path="3-3.html">
+        <li class="chapter active" data-level="5.1.3" data-path="4-3.html">
             
-                <a href="3-3.html">
+                <a href="4-3.html">
             
                     
                     Nunjucksのコード補完がない
@@ -271,9 +304,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.4" data-path="3-4.html">
+        <li class="chapter " data-level="5.1.4" data-path="4-4.html">
             
-                <a href="3-4.html">
+                <a href="4-4.html">
             
                     
                     NunjucksをPrettierで整形すると崩れる
@@ -317,7 +350,7 @@
   <header>
     <div class="py-6 px-8 bg-gray-800 flex justify-between items-center border-b border-gray-200">
       <span class="font-bold text-white">HANDSON-HONKIT</span>
-      <a href="#" class="hover:bg-blue-800 focus:bg-blue-800 rounded-[50%]">
+      <a href="https://github.com/ringtail003/handson-honkit" class="hover:bg-blue-800 focus:bg-blue-800 rounded-[50%]">
         <img src="https://icongr.am/octicons/mark-github.svg?size=32&color=ffffff" alt="github">
       </a>
     </div>
@@ -362,11 +395,11 @@
   </g>
 </svg>
 </div>
-  <span>tailwindcssのプリフライトが効かない</span>
+  <span>Nunjucksのコード補完がない</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="tailwindcssのプリフライトが効かない">tailwindcssのプリフライトが効かない</h1>
+  <h1 class="text-2xl font-bold flex-1" id="nunjucksのコード補完がない">Nunjucksのコード補完がない</h1>
 
     <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
 
@@ -374,51 +407,22 @@
 
 
 
-<p>tailwindcssには「プリフライト」という機能があります。デフォルトの見た目をいったんまっさらにしてからスタイルをあてることで、環境依存による見た目のばらつきがなくなるものです。</p>
+<p>Numjucksの記法やビルトインのフィルタなどコード補完がなく、ドキュメントを探し当てつつ、ビルドのエラーを読みつつ、の開発にしんどさがありました。引数に入ってきたオブジェクトを展開するフィルタもなく、デバッグもちょっとしんどい感じでした。</p>
+<p><br></p>
+<div class="code-title">something.md</div>
+
+<pre><code class="lang-html">{% macro render(page) %}
+  {{ pagee }} <span class="hljs-comment">&lt;!-- スペルミスに気づけない --&gt;</span>
+  {{ page }} <span class="hljs-comment">&lt;!-- &quot;[Object]が展開される&quot; --&gt;</span>
+{% endmacro %}
+</code></pre>
+<h2 id="try）エディタのエクステンションを使う">Try）エディタのエクステンションを使う</h2>
+<p>ドキュメントにVSCodeエクステンションがあったので使ってみましたが <code>.nunjucks</code> などNunjucks専用の拡張子でないと補完が効かないようです。</p>
 <p><br></p>
 <blockquote>
-<p><strong>Preflight | tailwindcss</strong><br><a href="https://tailwindcss.com/docs/preflight" target="_blank">https://tailwindcss.com/docs/preflight</a>
-<br>
+<p><strong>Syntax Highlighting | Nunjucks</strong><br><a href="https://mozilla.github.io/nunjucks/templating.html#syntax-highlighting" target="_blank">https://mozilla.github.io/nunjucks/templating.html#syntax-highlighting</a>
 <br></p>
 </blockquote>
-<p>HonKitのデフォルトテーマ（元はGitBookのテーマの仕組み）はCSSを自力で書かずともいい感じに見た目が整うよう設計されていて、後から追加したtailwindcssのプリフライトでまっさらにできない部分があるようです。</p>
-<p><br></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- pやulにマージンがついてしまう --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-0&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-comment">&lt;!-- サイドバーに付与されたクラスの見た目が打ち消せない --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;summary&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;chapter active&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-</code></pre>
-<h2 id="解決策１）npmで公開されたテーマを使う">解決策１）npmで公開されたテーマを使う</h2>
-<p>HonKitのドキュメントにテーマはプラグインとして公開されているとあるため、テーマの変更がおそらく正攻法です。</p>
-<p><br></p>
-<blockquote>
-<p><strong>Publish a theme | HonKit</strong><br><a href="https://honkit.netlify.app/themes/" target="_blank">https://honkit.netlify.app/themes/</a>
-<br>
-<br></p>
-</blockquote>
-<p>GitBookのために作られた <code>gitbook-plugin-</code> を <code>honkit-plugin-</code> に置き換えれば動作するとの情報もあり、何なら自分でテーマを作ってプラグインとして公開すれば完全にカスタムできそうです。</p>
-<p><br></p>
-<p>ちょっと使って試してみるにはハードルが高かったのでこの方法はあきらめましたが、がっつりサイト構築するにはプラグインが良さそうに思います。</p>
-<h2 id="解決策２）tailwindcssで上書きする">解決策２）tailwindcssで上書きする</h2>
-<p>はがゆいところをtailwindcssで上書きする方法です。ゴリ押し感が強いですが、サイドバーの見た目など一部だけ書き換えるにはてっとり早いです。</p>
-<p><br></p>
-<p>今回はこの方法を使いました。</p>
-<div class="code-title">tailwind.css</div>
-
-<pre><code class="lang-css"><span class="hljs-keyword">@layer</span> base {
-  <span class="hljs-selector-tag">p</span> {
-    <span class="hljs-keyword">@apply</span> m-<span class="hljs-number">0</span> !important;
-  }
-  <span class="hljs-selector-class">.book-summary</span> <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.summary</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.header</span> {
-    <span class="hljs-keyword">@apply</span> font-semibold text-gray-<span class="hljs-number">600</span>;
-  }
-}
-</code></pre>
 
                                 
                                 </section>
@@ -459,7 +463,7 @@
             name="q"
             accesskey="/"
             class="border border-gray-400 py-2 pl-12 pr-4 rounded-md outline-none w-[400px] focus:drop-shadow-md"
-            placeholder="何かお探しですか？"
+            placeholder="サイト内検索"
           >
           <img src="https://icongr.am/octicons/search.svg?size=16&color=9CA3AF"
             alt=""
@@ -474,12 +478,12 @@
 
             
                 
-                <a href="../issue.html" class="navigation navigation-prev " aria-label="Previous page: 詰まったところ">
+                <a href="4-2.html" class="navigation navigation-prev " aria-label="Previous page: サイドバーのIntroductionが消えない">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="3-2.html" class="navigation navigation-next " aria-label="Next page: サイドバーのIntroductionが消えない">
+                <a href="4-4.html" class="navigation navigation-next " aria-label="Next page: NunjucksをPrettierで整形すると崩れる">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -490,7 +494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tailwindcssのプリフライトが効かない","updatedAt":"2022/10/02","level":"4.1.1","depth":2,"next":{"title":"サイドバーのIntroductionが消えない","level":"4.1.2","depth":2,"path":"03-issue/3-2.md","ref":"03-issue/3-2.md","articles":[]},"previous":{"title":"詰まったところ","level":"4.1","depth":1,"path":"issue.md","ref":"issue.md","articles":[{"title":"tailwindcssのプリフライトが効かない","level":"4.1.1","depth":2,"path":"03-issue/3-1.md","ref":"03-issue/3-1.md","articles":[]},{"title":"サイドバーのIntroductionが消えない","level":"4.1.2","depth":2,"path":"03-issue/3-2.md","ref":"03-issue/3-2.md","articles":[]},{"title":"Nunjucksのコード補完がない","level":"4.1.3","depth":2,"path":"03-issue/3-3.md","ref":"03-issue/3-3.md","articles":[]},{"title":"NunjucksをPrettierで整形すると崩れる","level":"4.1.4","depth":2,"path":"03-issue/3-4.md","ref":"03-issue/3-4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"03-issue/3-1.md","mtime":"2022-10-02T09:01:57.890Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-02T12:11:37.582Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nunjucksのコード補完がない","updatedAt":"2022/10/02","level":"5.1.3","depth":2,"next":{"title":"NunjucksをPrettierで整形すると崩れる","level":"5.1.4","depth":2,"path":"04-issue/4-4.md","ref":"04-issue/4-4.md","articles":[]},"previous":{"title":"サイドバーのIntroductionが消えない","level":"5.1.2","depth":2,"path":"04-issue/4-2.md","ref":"04-issue/4-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"04-issue/4-3.md","mtime":"2022-10-02T09:42:38.004Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-03T23:44:13.972Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -549,6 +553,10 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
