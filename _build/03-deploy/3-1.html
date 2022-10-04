@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>ヘッダーの共通化 · handson-honkit</title>
+        <title>GitBook · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -48,10 +48,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2-5.html" />
+    <link rel="next" href="3-2.html" />
     
     
-    <link rel="prev" href="2-3.html" />
+    <link rel="prev" href="../02-customize/2-5.html" />
     
 
     </head>
@@ -146,9 +146,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="2-1.html">
+        <li class="chapter " data-level="3.1" data-path="../02-customize/2-1.html">
             
-                <a href="2-1.html">
+                <a href="../02-customize/2-1.html">
             
                     
                     tailwindcss
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="2-2.html">
+        <li class="chapter " data-level="3.2" data-path="../02-customize/2-2.html">
             
-                <a href="2-2.html">
+                <a href="../02-customize/2-2.html">
             
                     
                     パンくずリスト
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="2-3.html">
+        <li class="chapter " data-level="3.3" data-path="../02-customize/2-3.html">
             
-                <a href="2-3.html">
+                <a href="../02-customize/2-3.html">
             
                     
                     パーツの利用
@@ -185,9 +185,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4" data-path="2-4.html">
+        <li class="chapter " data-level="3.4" data-path="../02-customize/2-4.html">
             
-                <a href="2-4.html">
+                <a href="../02-customize/2-4.html">
             
                     
                     ヘッダーの共通化
@@ -198,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="2-5.html">
+        <li class="chapter " data-level="3.5" data-path="../02-customize/2-5.html">
             
-                <a href="2-5.html">
+                <a href="../02-customize/2-5.html">
             
                     
                     サイト内検索
@@ -218,9 +218,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../03-deploy/3-1.html">
+        <li class="chapter active" data-level="4.1" data-path="3-1.html">
             
-                <a href="../03-deploy/3-1.html">
+                <a href="3-1.html">
             
                     
                     GitBook
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../03-deploy/3-2.html">
+        <li class="chapter " data-level="4.2" data-path="3-2.html">
             
-                <a href="../03-deploy/3-2.html">
+                <a href="3-2.html">
             
                     
                     Firebase
@@ -368,7 +368,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <nav class="breadcrumbs">
-
     <a href="..">トップ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -382,7 +381,7 @@
   </g>
 </svg>
 </div>
-    <a href="2-1.html">カスタマイズ</a>
+    <a href="../03-setup/3-1.html">デプロイ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -395,58 +394,69 @@
   </g>
 </svg>
 </div>
-  <span>ヘッダーの共通化</span>
+    <span>GitBook</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="ヘッダーの共通化">ヘッダーの共通化</h1>
+  <h1 class="text-2xl font-bold flex-1" id="gitbook">GitBook</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
 
 </div>
 
 
-<p>ロゴなど埋め込むために共通のヘッダを設置することにしました。</p>
-<p>全体の外観はデフォルトのテーマが適用されますが <code>_layouts</code> フォルダにHTMLを追加するとヘッダーなどページの一部分を差し替えることができます。</p>
-<p><br></p>
-<blockquote>
-<p><strong>Theming | HonKit</strong><br><a href="https://honkit.netlify.app/themes/" target="_blank">https://honkit.netlify.app/themes/</a>
-<br></p>
-</blockquote>
-<h2 id="ヘッダ用ファイルの作成">ヘッダ用ファイルの作成</h2>
-<p><code>header.html</code> を追加します。</p>
-<div class="code-title">_layouts/website/header.html</div>
 
-<pre><code class="lang-html">{% block book_header %}
-  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./logo.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;ロゴ&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-{% endblock %}
-</code></pre>
-<p>このファイルはサイト共通のヘッダとして扱われ、トップページや記事ページなど全てのページで表示されます。</p>
+<p>この章では、デプロイしたホスティングサービスについて紹介します。</p>
+<p>最初にGitBookにデプロイしてみましたが、結果としてうまくいきませんでした。</p>
+<p><br></p>
+<div class="border border-gray-200 shadow-sm p-8 rounded-md guide">
+  <div class="flex items-center gap-4">
+    <div class="h-14 w-14 text-gray-800">
+<svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-144.000000, -48.000000)">
+      <g transform="translate(144.000000, 48.000000)">
+        <rect fill-rule="nonzero" x="0" y="0" width="24" height="24"/>
+        <path d="M4,5 C4,3.34315 5.34315,2 7,2 L18,2 C19.1046,2 20,2.89543 20,4 L20,16.99 C20,17.1576 19.9623,17.3115 19.8872,17.4617 L19.3416,18.5528 C19.2009,18.8343 19.2009,19.1657 19.3416,19.4472 L19.8854,20.5348 C19.9586,20.6737 20,20.832 20,21 C20,21.5523 19.5523,22 19,22 L7,22 C5.34315,22 4,20.6569 4,19 L4,5 Z M7,18 L17.4076,18 C17.1789,18.6468 17.1789,19.3532 17.4076,20 L7,20 C6.44772,20 6,19.5523 6,19 C6,18.4477 6.44772,18 7,18 Z M10,7 C9.44772,7 9,7.44772 9,8 C9,8.55228 9.44772,9 10,9 L14,9 C14.5523,9 15,8.55228 15,8 C15,7.44772 14.5523,7 14,7 L10,7 Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+    <div>
+      <div class="text-sm text-gray-500">http://app.gitbook.com/</div>
+      <a href="http://app.gitbook.com/" target="_blank">GitBook</a>
+    </div>
+  </div>
+</div>
+
+<h2 id="手順">手順</h2>
+<p>「Synchronize with Git」メニューから、GitHub上で動作するアプリケーション「GitBook.com」をインストールします。</p>
 <figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
-  <a href="https://user-images.githubusercontent.com/15980747/193443829-6fe6194f-0287-45e1-af88-a501f948b15b.png" target="_blank">
-    <img alt src="https://user-images.githubusercontent.com/15980747/193443829-6fe6194f-0287-45e1-af88-a501f948b15b.png">
+  <a href="https://user-images.githubusercontent.com/15980747/193587479-0d156c8c-3acb-4c6e-a343-54a8b78af229.png" target="_blank">
+    <img alt src="https://user-images.githubusercontent.com/15980747/193587479-0d156c8c-3acb-4c6e-a343-54a8b78af229.png">
   </a>
-  <figcaption class="text-xs">ヘッダーを設置した例</figcaption>
+  <figcaption class="text-xs">Synchronize with Git</figcaption>
 </figure>
 
-<h2 id="参考：ファイル名・ブロック名の仕様">参考：ファイル名・ブロック名の仕様</h2>
-<p>HonKitのドキュメントには <code>website/page.html</code> が記事ページのレイアウト（ブラウザ用）として使われると書いてありますが、他にどんなファイルが配置できるのか、どんなブロック名が使えるのか記載がありません。</p>
-<p><br>
-<code>website</code> はもともとGitBookにあった仕組みのため、ファイル名やブロック名は本家GitBookのソースコードを参考にしました。アーカイブ済リポジトリのため、コピペしたコードをそのままGitBookにデプロイしても動作する保証はありませんが、シンタックスやブロック名の参考になりました。</p>
-<p><br></p>
-<blockquote>
-<p><strong>_layouts | GitBookIO/theme-default</strong><br><a href="https://github.com/GitbookIO/theme-default/tree/a8e920453dc8e4eb522840b61606486622848099/_layouts/website" target="_blank">https://github.com/GitbookIO/theme-default/tree/a8e920453dc8e4eb522840b61606486622848099/_layouts/website</a>
-<br></p>
-</blockquote>
-<p>またHonKitのドキュメントで実際にHonKitで構築したサイトとそのソースコードが公開されているため、とても参考になりました。</p>
-<p><br></p>
-<blockquote>
-<p><strong>Examples | HonKit</strong><br><a href="https://honkit.netlify.app/examples.html" target="_blank">https://honkit.netlify.app/examples.html</a></p>
-</blockquote>
+<p>リポジトリを選択するとファイルが自動で読み込まれ、Publishボタンで公開できます。</p>
+<figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
+  <a href="https://user-images.githubusercontent.com/15980747/193700134-94a1cf06-e2e3-44f7-bf11-9949a93715ef.png" target="_blank">
+    <img alt src="https://user-images.githubusercontent.com/15980747/193700134-94a1cf06-e2e3-44f7-bf11-9949a93715ef.png">
+  </a>
+  <figcaption class="text-xs">Publishボタンで公開</figcaption>
+</figure>
+
+<h2 id="公開したサイト">公開したサイト</h2>
+<p><a href="https://yayoi-matsuoka.gitbook.io/handson-honkit" target="_blank">https://yayoi-matsuoka.gitbook.io/handson-honkit</a></p>
+<figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
+  <a href="https://user-images.githubusercontent.com/15980747/193593594-ac28e513-3481-44f3-be32-82e3e0883736.png" target="_blank">
+    <img alt src="https://user-images.githubusercontent.com/15980747/193593594-ac28e513-3481-44f3-be32-82e3e0883736.png">
+  </a>
+  <figcaption class="text-xs">Publishボタンで公開</figcaption>
+</figure>
+
+<p>カスタマイズしたCSSやパンくずなどのパーツは表示されず、URLはサイドバーの日本語がアルファベットに変換されました。ローカルと同じ見た目を再現するには設定をいろいろ変更しないと厳しそうです。</p>
 
                                 
                                 </section>
@@ -502,12 +512,12 @@
 
             
                 
-                <a href="2-3.html" class="navigation navigation-prev " aria-label="Previous page: パーツの利用">
+                <a href="../02-customize/2-5.html" class="navigation navigation-prev " aria-label="Previous page: サイト内検索">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="2-5.html" class="navigation navigation-next " aria-label="Next page: サイト内検索">
+                <a href="3-2.html" class="navigation navigation-next " aria-label="Next page: Firebase">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -518,7 +528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ヘッダーの共通化","updatedAt":"2022/10/02","level":"3.4","depth":1,"next":{"title":"サイト内検索","level":"3.5","depth":1,"path":"02-customize/2-5.md","ref":"02-customize/2-5.md","articles":[]},"previous":{"title":"パーツの利用","level":"3.3","depth":1,"path":"02-customize/2-3.md","ref":"02-customize/2-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-4.md","mtime":"2022-10-02T10:11:10.966Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GitBook","updatedAt":"2022/10/03","level":"4.1","depth":1,"next":{"title":"Firebase","level":"4.2","depth":1,"path":"03-deploy/3-2.md","ref":"03-deploy/3-2.md","articles":[]},"previous":{"title":"サイト内検索","level":"3.5","depth":1,"path":"02-customize/2-5.md","ref":"02-customize/2-5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"03-deploy/3-1.md","mtime":"2022-10-03T23:45:17.026Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T11:51:03.468Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -577,10 +587,6 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

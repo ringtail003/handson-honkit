@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>tailwindcssのプリフライトが効かない · handson-honkit</title>
+        <title>開発環境 · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -48,10 +48,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="4-2.html" />
+    <link rel="next" href="1-2.html" />
     
     
-    <link rel="prev" href="../issue.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -100,9 +100,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../01-setup/1-1.html">
+        <li class="chapter active" data-level="2.1" data-path="1-1.html">
             
-                <a href="../01-setup/1-1.html">
+                <a href="1-1.html">
             
                     
                     開発環境
@@ -113,9 +113,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../01-setup/1-2.html">
+        <li class="chapter " data-level="2.2" data-path="1-2.html">
             
-                <a href="../01-setup/1-2.html">
+                <a href="1-2.html">
             
                     
                     HonKitセットアップ
@@ -126,9 +126,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../01-setup/1-3.html">
+        <li class="chapter " data-level="2.3" data-path="1-3.html">
             
-                <a href="../01-setup/1-3.html">
+                <a href="1-3.html">
             
                     
                     記事を追加
@@ -265,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="5.1.1" data-path="4-1.html">
+        <li class="chapter " data-level="5.1.1" data-path="../04-issue/4-1.html">
             
-                <a href="4-1.html">
+                <a href="../04-issue/4-1.html">
             
                     
                     tailwindcssのプリフライトが効かない
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.2" data-path="4-2.html">
+        <li class="chapter " data-level="5.1.2" data-path="../04-issue/4-2.html">
             
-                <a href="4-2.html">
+                <a href="../04-issue/4-2.html">
             
                     
                     サイドバーのIntroductionが消えない
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.3" data-path="4-3.html">
+        <li class="chapter " data-level="5.1.3" data-path="../04-issue/4-3.html">
             
-                <a href="4-3.html">
+                <a href="../04-issue/4-3.html">
             
                     
                     Nunjucksのコード補完がない
@@ -304,9 +304,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.4" data-path="4-4.html">
+        <li class="chapter " data-level="5.1.4" data-path="../04-issue/4-4.html">
             
-                <a href="4-4.html">
+                <a href="../04-issue/4-4.html">
             
                     
                     NunjucksをPrettierで整形すると崩れる
@@ -368,7 +368,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <nav class="breadcrumbs">
-
     <a href="..">トップ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -382,7 +381,7 @@
   </g>
 </svg>
 </div>
-    <a href="../issue.html">詰まったところ</a>
+    <a href="1-1.html">セットアップ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -395,63 +394,66 @@
   </g>
 </svg>
 </div>
-  <span>tailwindcssのプリフライトが効かない</span>
+    <span>開発環境</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="tailwindcssのプリフライトが効かない">tailwindcssのプリフライトが効かない</h1>
+  <h1 class="text-2xl font-bold flex-1" id="開発環境">開発環境</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
 
 </div>
 
 
 
-<p>tailwindcssには「プリフライト」という機能があります。デフォルトの見た目をいったんまっさらにしてからスタイルをあてることで、環境依存による見た目のばらつきがなくなるものです。</p>
-<p><br></p>
-<blockquote>
-<p><strong>Preflight | tailwindcss</strong><br><a href="https://tailwindcss.com/docs/preflight" target="_blank">https://tailwindcss.com/docs/preflight</a>
-<br>
-<br></p>
-</blockquote>
-<p>HonKitのデフォルトテーマ（元はGitBookのテーマの仕組み）はCSSを自力で書かずともいい感じに見た目が整うよう設計されていて、後から追加したtailwindcssのプリフライトでまっさらにできない部分があるようです。</p>
-<p><br></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- pやulにマージンがついてしまう --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-0&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-comment">&lt;!-- サイドバーに付与されたクラスの見た目が打ち消せない --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;summary&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;chapter active&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-</code></pre>
-<h2 id="解決策１）npmで公開されたテーマを使う">解決策１）npmで公開されたテーマを使う</h2>
-<p>HonKitのドキュメントにテーマはプラグインとして公開されているとあるため、テーマの変更がおそらく正攻法です。</p>
-<p><br></p>
-<blockquote>
-<p><strong>Publish a theme | HonKit</strong><br><a href="https://honkit.netlify.app/themes/" target="_blank">https://honkit.netlify.app/themes/</a>
-<br>
-<br></p>
-</blockquote>
-<p>GitBookのために作られた <code>gitbook-plugin-</code> を <code>honkit-plugin-</code> に置き換えれば動作するとの情報もあり、何なら自分でテーマを作ってプラグインとして公開すれば完全にカスタムできそうです。</p>
-<p><br></p>
-<p>ちょっと使って試してみるにはハードルが高かったのでこの方法はあきらめましたが、がっつりサイト構築するにはプラグインが良さそうに思います。</p>
-<h2 id="解決策２）tailwindcssで上書きする">解決策２）tailwindcssで上書きする</h2>
-<p>はがゆいところをtailwindcssで上書きする方法です。ゴリ押し感が強いですが、サイドバーの見た目など一部だけ書き換えるにはてっとり早いです。</p>
-<p><br></p>
-<p>今回はこの方法を使いました。</p>
-<div class="code-title">tailwind.css</div>
-
-<pre><code class="lang-css"><span class="hljs-keyword">@layer</span> base {
-  <span class="hljs-selector-tag">p</span> {
-    <span class="hljs-keyword">@apply</span> m-<span class="hljs-number">0</span> !important;
-  }
-  <span class="hljs-selector-class">.book-summary</span> <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.summary</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.header</span> {
-    <span class="hljs-keyword">@apply</span> font-semibold text-gray-<span class="hljs-number">600</span>;
-  }
-}
-</code></pre>
+<p>この章では、HonKitをインストールして最初の記事を書くまでの操作を紹介します。</p>
+<h2 id="主な依存パッケージ">主な依存パッケージ</h2>
+<table>
+<thead>
+<tr>
+<th>パッケージ</th>
+<th>バージョン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://nodejs.org/ja/" target="_blank">Node</a></td>
+<td>v16.10</td>
+</tr>
+<tr>
+<td><a href="https://honkit.netlify.app/" target="_blank">HonKit</a></td>
+<td>v4.0</td>
+</tr>
+<tr>
+<td><a href="https://tailwindcss.com/" target="_blank">Tailwindcss</a></td>
+<td>v3.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="動作確認したブラウザ">動作確認したブラウザ</h2>
+<table>
+<thead>
+<tr>
+<th>ブラウザ</th>
+<th>対応</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome</td>
+<td>対応（v108）</td>
+<td></td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>未対応</td>
+<td>CSSの <code>:has</code> 未対応のためサイドバーのアクティブ判定がおかしくなるはず</td>
+</tr>
+</tbody>
+</table>
+<h2 id="レスポンシブ表示">レスポンシブ表示</h2>
+<p>デスクトップPCしか確認していません。</p>
 
                                 
                                 </section>
@@ -507,12 +509,12 @@
 
             
                 
-                <a href="../issue.html" class="navigation navigation-prev " aria-label="Previous page: 詰まったところ">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: このサイトについて">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="4-2.html" class="navigation navigation-next " aria-label="Next page: サイドバーのIntroductionが消えない">
+                <a href="1-2.html" class="navigation navigation-next " aria-label="Next page: HonKitセットアップ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -523,7 +525,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tailwindcssのプリフライトが効かない","updatedAt":"2022/10/02","level":"5.1.1","depth":2,"next":{"title":"サイドバーのIntroductionが消えない","level":"5.1.2","depth":2,"path":"04-issue/4-2.md","ref":"04-issue/4-2.md","articles":[]},"previous":{"title":"詰まったところ","level":"5.1","depth":1,"path":"issue.md","ref":"issue.md","articles":[{"title":"tailwindcssのプリフライトが効かない","level":"5.1.1","depth":2,"path":"04-issue/4-1.md","ref":"04-issue/4-1.md","articles":[]},{"title":"サイドバーのIntroductionが消えない","level":"5.1.2","depth":2,"path":"04-issue/4-2.md","ref":"04-issue/4-2.md","articles":[]},{"title":"Nunjucksのコード補完がない","level":"5.1.3","depth":2,"path":"04-issue/4-3.md","ref":"04-issue/4-3.md","articles":[]},{"title":"NunjucksをPrettierで整形すると崩れる","level":"5.1.4","depth":2,"path":"04-issue/4-4.md","ref":"04-issue/4-4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"04-issue/4-1.md","mtime":"2022-10-03T12:42:47.396Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"開発環境","updatedAt":"2022/10/03","level":"2.1","depth":1,"next":{"title":"HonKitセットアップ","level":"2.2","depth":1,"path":"01-setup/1-2.md","ref":"01-setup/1-2.md","articles":[]},"previous":{"title":"このサイトについて","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"01-setup/1-1.md","mtime":"2022-10-04T11:44:02.969Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T11:51:03.468Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -582,10 +584,6 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>tailwindcss · handson-honkit</title>
+        <title>パンくずリスト · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -48,10 +48,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2-2.html" />
+    <link rel="next" href="2-3.html" />
     
     
-    <link rel="prev" href="../01-setup/1-3.html" />
+    <link rel="prev" href="2-1.html" />
     
 
     </head>
@@ -146,7 +146,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="2-1.html">
+        <li class="chapter " data-level="3.1" data-path="2-1.html">
             
                 <a href="2-1.html">
             
@@ -159,7 +159,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="2-2.html">
+        <li class="chapter active" data-level="3.2" data-path="2-2.html">
             
                 <a href="2-2.html">
             
@@ -395,81 +395,126 @@
   </g>
 </svg>
 </div>
-  <span>tailwindcss</span>
+  <span>パンくずリスト</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="tailwindcss">tailwindcss</h1>
+  <h1 class="text-2xl font-bold flex-1" id="パンくずリスト">パンくずリスト</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
 
 </div>
 
 
-<p>この章では、デフォルトで用意された機能をカスタマイズした手順を紹介します。</p>
-<p>CSSをイチから書くのが面倒なので、tailwindcssを導入しました。</p>
-<h2 id="セットアップ">セットアップ</h2>
-<pre><code>npm install tailwindcss --save-dev
-</code></pre><p>tailwindcssの設定ファイルを作成します。HonKitの記事は <code>.md</code> または <code>.html</code> で書くので、これらのファイルのCSSクラスがビルドに含まれるよう設定しておきます。</p>
-<p><br></p>
-<pre><code>./node_modules/.bin/tailwind init
-</code></pre><div class="code-title">tailwind.config.js</div>
+<p>記事をグループにまとめてアクセスしやすくするため、パンくずリストを設置することにしました。</p>
+<h2 id="サイドバーのグループ化">サイドバーのグループ化</h2>
+<p>パンくずとサイドバーを同じ階層構造にするため、サイドバーをグループ化します。マークダウン記法で見出しをつけると自動的にグループ化されます。</p>
+<div class="code-title">SUMMARY.md</div>
 
-<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-attr">content</span>: [
-    <span class="hljs-string">&quot;./docs/**/*.{md,html}&quot;</span>,
-  ],
-  ...
-}
-</code></pre>
-<p>tailwindcssのエントリポイントのCSSファイルを作成します。</p>
-<p><br></p>
-<pre><code>touch tailwind.css
-</code></pre><div class="code-title">tailwind.css</div>
+<pre><code class="lang-md"><span class="hljs-section">## グループ1</span>
 
-<pre><code class="lang-js">@tailwind base;
-@tailwind components;
-@tailwind utilities;
-</code></pre>
-<p>ビルトインサーバーの立ち上げとビルドをnpm scriptsに追加しておきます。</p>
-<div class="code-title">package.json</div>
+<span class="hljs-bullet">*</span> [<span class="hljs-string">記事1</span>](<span class="hljs-link">1.md</span>)
+<span class="hljs-bullet">*</span> [<span class="hljs-string">記事2</span>](<span class="hljs-link">2.md</span>)
 
-<pre><code class="lang-js"><span class="hljs-string">&quot;scripts&quot;</span>: {
-  <span class="hljs-string">&quot;tailwind&quot;</span>: <span class="hljs-string">&quot;tailwindcss&quot;</span>,
-  <span class="hljs-string">&quot;tailwind:build&quot;</span>: <span class="hljs-string">&quot;npm run tailwind -- --input=./tailwind.css --output=./dist.css&quot;</span>,
-  <span class="hljs-string">&quot;tailwind:serve&quot;</span>: <span class="hljs-string">&quot;npm run tailwind:build -- --watch&quot;</span>,
-  ...
+<span class="hljs-section">## グループ2</span>
+
+<span class="hljs-bullet">*</span> [<span class="hljs-string">記事3</span>](<span class="hljs-link">3.md</span>)
+<span class="hljs-bullet">*</span> [<span class="hljs-string">記事4</span>](<span class="hljs-link">4.md</span>)
 </code></pre>
-<h2 id="読み込み">読み込み</h2>
-<p>HonKitの設定ファイル <code>book.json</code> でtailwindcssのビルドファイルを読み込むようにします。
+<h2 id="ファイルのグループ化">ファイルのグループ化</h2>
+<p>同じ階層のフォルダにファイルをまとめ、フォルダごとにベースのページを作ることにします。
 <br>
 <br></p>
-<pre><code>touch book.json
-</code></pre><div class="code-title">book.json</div>
+<pre><code>├── group1
+│   ├── 1.md
+│   ├── 2.md
+│   └── base.md
+├── group2
+│   ├── 3.md
+│   ├── 4.md
+│   └── base.md
+</code></pre><div class="border-l-4 border-blue-900 px-8 py-4 tips my-4">
+  <div class="flex items-center gap-4">
+    <div class="h-10 w-10 text-blue-900">
+<svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-768.000000, -192.000000)">
+      <g transform="translate(768.000000, 192.000000)">
+        <rect fill-rule="nonzero" x="0" y="0" width="24" height="24"/>
+        <path d="M12,19.0001 C12.51285,19.0001 12.9355092,19.386127 12.9932725,19.8834761 L13,20.0001 L13,21.0001 C13,21.5524 12.5523,22.0001 12,22.0001 C11.48715,22.0001 11.0644908,21.614073 11.0067275,21.1167239 L11,21.0001 L11,20.0001 C11,19.4478 11.4477,19.0001 12,19.0001 Z M7.05028,16.9498 C7.4408,17.3403 7.4408,17.9735 7.05028,18.364 L6.34317,19.0711 C5.95265,19.4617 5.31948,19.4617 4.92896,19.0711 C4.53843,18.6806 4.53843,18.0474 4.92896,17.6569 L5.6360625,16.9498 C6.02659,16.5593 6.65975,16.5593 7.05028,16.9498 Z M18.3639,16.9498 L19.071,17.657 C19.4615,18.0475 19.4615,18.6806 19.071,19.0712 C18.6805,19.4617 18.0473,19.4617 17.6568,19.0712 L16.9497,18.3641 C16.5592,17.9735 16.5592,17.3404 16.9497,16.9498 C17.3402,16.5593 17.9734,16.5593 18.3639,16.9498 Z M12.6172,2 C13.6259,2 14.4767,2.75107 14.6018,3.75193 L14.9818,6.79221 C16.7852,7.82703 18,9.77165 18,12 C18,15.3137 15.3137,18 12,18 C8.68629,18 6,15.3137 6,12 C6,9.77165 7.21476,7.82703 9.01819,6.79221 L9.39823,3.75193 C9.52333,2.75107 10.3741,2 11.3828,2 L12.6172,2 Z M12,8 C9.79086,8 8,9.79086 8,12 C8,14.2091 9.79086,16 12,16 C14.2091,16 16,14.2091 16,12 C16,9.79086 14.2091,8 12,8 Z M4,11.0001 C4.55228,11.0001 5,11.4478 5,12.0001 C5,12.5524 4.55228,13.0001 4,13.0001 L3,13.0001 C2.44772,13.0001 2,12.5524 2,12.0001 C2,11.4478 2.44772,11.0001 3,11.0001 L4,11.0001 Z M21,11.0001 C21.5523,11.0001 22,11.4478 22,12.0001 C22,12.5524 21.5523,13.0001 21,13.0001 L20,13.0001 C19.4477,13.0001 19,12.5524 19,12.0001 C19,11.4478 19.4477,11.0001 20,11.0001 L21,11.0001 Z M19.0711,4.929 C19.4616,5.31953 19.4616,5.95269 19.0711,6.34322 L18.364,7.05032 C17.9735,7.44085 17.3403,7.44085 16.9498,7.05032 C16.5592,6.6598 16.5592,6.02663 16.9498,5.63611 L17.6569,4.929 C18.0474,4.53848 18.6806,4.53848 19.0711,4.929 Z M6.34309,4.92903 L7.0502,5.63614 C7.44072,6.02666 7.44072,6.65983 7.0502,7.05035 C6.65968,7.44088 6.02651,7.44088 5.63598625,7.05035 L4.92888,6.34325 C4.53835,5.95272 4.53836,5.31956 4.92888,4.92903 C5.3194,4.53851 5.95257,4.53851 6.34309,4.92903 Z M12.6172,4 L11.3828,4 L11.1328,6 L12.8672,6 L12.6172,4 Z" fill="currentColor"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+    <div class="text-sm">HonKitはサブフォルダに対応しています。</div>
+  </div>
+</div>
 
-<pre><code class="lang-js">{
-  ...
-  <span class="hljs-string">&quot;styles&quot;</span>: {
-    <span class="hljs-string">&quot;website&quot;</span>: <span class="hljs-string">&quot;./dist.css&quot;</span>
-  }
-}
-</code></pre>
+<h2 id="nunjucks">Nunjucks</h2>
+<p>HonKitはNunjucksを使ってマークダウンをHTMLに変換します。</p>
 <p><br></p>
 <blockquote>
-<p>Configuration | HonKit<br><a href="https://honkit.netlify.app/config.html" target="_blank">https://honkit.netlify.app/config.html</a>
+<p><strong>Templating | HonKit</strong><br>HonKit uses the Nunjucks templating language to process pages and theme&apos;s templates.<br><a href="https://honkit.netlify.app/templating/" target="_blank">https://honkit.netlify.app/templating/</a></p>
+</blockquote>
+<p><br></p>
+<p>Nunjucksには <code>include</code> や <code>import</code> など別のファイルを読み込むシンタックスがあります。</p>
+<p><br></p>
+<blockquote>
+<p><strong>import | Nunjucks</strong><br><a href="https://mozilla.github.io/nunjucks/templating.html#import" target="_blank">https://mozilla.github.io/nunjucks/templating.html#import</a></p>
+</blockquote>
+<h2 id="ベースのページにパンくずリストを設置">ベースのページにパンくずリストを設置</h2>
+<p>ベースのページにパンくずリストと記事コンテンツのブロックを設置します。</p>
+<div class="code-title">base.md</div>
+
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- パンくずリスト --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+  {%- block breadcrumbs %}
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>トップ<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/group1/1.html&quot;</span>&gt;</span>グループ1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  {%- endblock %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- 記事コンテンツ --&gt;</span>
+{% block contents %}{% endblock %}
+</code></pre>
+<p>それぞれの記事はベースを継承し、パンくずリストの末尾に自身のタイトルを埋め込みます。</p>
+<div class="code-title">1.md</div>
+
+<pre><code class="lang-md">---
+<span class="hljs-section">title: ページ1
+---</span>
+
+&lt;!-- ベースを継承 --&gt;
+{% extends &quot;./base.md&quot; %}
+
+&lt;!-- パンくずリスト --&gt;
+{%- block breadcrumbs %}
+  {{ super() }}
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span>{{ page.title }}<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+{%- endblock %}
+
+&lt;!-- 記事コンテンツ --&gt;
+{% block contents %}
+<span class="hljs-section">## コンテンツ</span>
+本文
+{% endblock %}
+</code></pre>
+<p>冒頭の <code>---</code> で囲われた部分はそのページのメタデータとして扱われます。本文中で <code>{{ page.変数 }}</code> のように取り出すことができます。</p>
+<p><br></p>
+<blockquote>
+<p><strong>Front Matter | HonKit</strong><br><a href="https://honkit.netlify.app/pages.html" target="_blank">https://honkit.netlify.app/pages.html</a>
+<br>
 <br></p>
 </blockquote>
-<h2 id="cssを使う">CSSを使う</h2>
-<p>設定が完了すれば、いつもどおりtailwindcssのCSSクラスが使えるようになります。</p>
-<div class="code-title">test.md</div>
-
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray-200 p-8 rounded-lg&quot;</span>&gt;</span>テスト<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
+<p>パンくずの見た目をCSSで整えれば完成です。</p>
 <figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
-  <a href="https://user-images.githubusercontent.com/15980747/193439595-c58e84b0-e214-431b-8223-8be34929cca7.png" target="_blank">
-    <img alt src="https://user-images.githubusercontent.com/15980747/193439595-c58e84b0-e214-431b-8223-8be34929cca7.png">
+  <a href="https://user-images.githubusercontent.com/15980747/193441826-4b2643b6-b20a-45d4-a441-52f7e89c5fd8.png" target="_blank">
+    <img alt src="https://user-images.githubusercontent.com/15980747/193441826-4b2643b6-b20a-45d4-a441-52f7e89c5fd8.png">
   </a>
-  <figcaption class="text-xs">tailwindcssのCSSクラスが適用された例</figcaption>
+  <figcaption class="text-xs">パンくずリストを設置した例</figcaption>
 </figure>
 
 
@@ -528,12 +573,12 @@
 
             
                 
-                <a href="../01-setup/1-3.html" class="navigation navigation-prev " aria-label="Previous page: 記事を追加">
+                <a href="2-1.html" class="navigation navigation-prev " aria-label="Previous page: tailwindcss">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="2-2.html" class="navigation navigation-next " aria-label="Next page: パンくずリスト">
+                <a href="2-3.html" class="navigation navigation-next " aria-label="Next page: パーツの利用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -544,7 +589,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tailwindcss","updatedAt":"2022/10/03","level":"3.1","depth":1,"next":{"title":"パンくずリスト","level":"3.2","depth":1,"path":"02-customize/2-2.md","ref":"02-customize/2-2.md","articles":[]},"previous":{"title":"記事を追加","level":"2.3","depth":1,"path":"01-setup/1-3.md","ref":"01-setup/1-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-1.md","mtime":"2022-10-03T12:38:00.571Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"パンくずリスト","updatedAt":"2022/10/02","level":"3.2","depth":1,"next":{"title":"パーツの利用","level":"3.3","depth":1,"path":"02-customize/2-3.md","ref":"02-customize/2-3.md","articles":[]},"previous":{"title":"tailwindcss","level":"3.1","depth":1,"path":"02-customize/2-1.md","ref":"02-customize/2-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-2.md","mtime":"2022-10-04T03:52:01.875Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T11:51:03.468Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -603,10 +648,6 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

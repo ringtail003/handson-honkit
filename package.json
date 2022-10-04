@@ -6,7 +6,7 @@
   "scripts": {
     "honkit": "honkit",
     "honkit:serve": "npm run honkit serve",
-    "honkit:build": "npm run tailwind:build && npm run honkit build ./ --log=debug --debug",
+    "honkit:build": "npm run tailwind:build && npm run honkit build ./ ./_build --log=debug --debug",
     "tailwind": "tailwindcss",
     "tailwind:build": "npm run tailwind -- --input=./tailwind.css --output=./docs/dist.css",
     "tailwind:serve": "npm run tailwind:build -- --watch",

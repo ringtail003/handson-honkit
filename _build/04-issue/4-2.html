@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>GitBook · handson-honkit</title>
+        <title>サイドバーのIntroductionが消えない · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -48,10 +48,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3-2.html" />
+    <link rel="next" href="4-3.html" />
     
     
-    <link rel="prev" href="../02-customize/2-5.html" />
+    <link rel="prev" href="4-1.html" />
     
 
     </head>
@@ -218,9 +218,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="3-1.html">
+        <li class="chapter " data-level="4.1" data-path="../03-deploy/3-1.html">
             
-                <a href="3-1.html">
+                <a href="../03-deploy/3-1.html">
             
                     
                     GitBook
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="3-2.html">
+        <li class="chapter " data-level="4.2" data-path="../03-deploy/3-2.html">
             
-                <a href="3-2.html">
+                <a href="../03-deploy/3-2.html">
             
                     
                     Firebase
@@ -265,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.1.1" data-path="../04-issue/4-1.html">
+        <li class="chapter " data-level="5.1.1" data-path="4-1.html">
             
-                <a href="../04-issue/4-1.html">
+                <a href="4-1.html">
             
                     
                     tailwindcssのプリフライトが効かない
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.2" data-path="../04-issue/4-2.html">
+        <li class="chapter active" data-level="5.1.2" data-path="4-2.html">
             
-                <a href="../04-issue/4-2.html">
+                <a href="4-2.html">
             
                     
                     サイドバーのIntroductionが消えない
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.3" data-path="../04-issue/4-3.html">
+        <li class="chapter " data-level="5.1.3" data-path="4-3.html">
             
-                <a href="../04-issue/4-3.html">
+                <a href="4-3.html">
             
                     
                     Nunjucksのコード補完がない
@@ -304,9 +304,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.4" data-path="../04-issue/4-4.html">
+        <li class="chapter " data-level="5.1.4" data-path="4-4.html">
             
-                <a href="../04-issue/4-4.html">
+                <a href="4-4.html">
             
                     
                     NunjucksをPrettierで整形すると崩れる
@@ -368,6 +368,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <nav class="breadcrumbs">
+
     <a href="..">トップ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -381,7 +382,7 @@
   </g>
 </svg>
 </div>
-    <a href="../03-setup/3-1.html">デプロイ</a>
+    <a href="../issue.html">詰まったところ</a>
     <div class="icon">
 <svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -394,69 +395,58 @@
   </g>
 </svg>
 </div>
-    <span>GitBook</span>
+  <span>サイドバーのIntroductionが消えない</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="gitbook">GitBook</h1>
+  <h1 class="text-2xl font-bold flex-1" id="サイドバーのintroductionが消えない">サイドバーのIntroductionが消えない</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/02</span>
 
 </div>
 
 
 
-<p>この章では、デプロイしたホスティングサービスについて紹介します。</p>
-<p>最初にGitBookにデプロイしてみましたが、結果としてうまくいきませんでした。</p>
+<p><code>1.md</code> のような記事ページのひとつをトップページとして使おうと思い、しばらく格闘していました。</p>
 <p><br></p>
-<div class="border border-gray-200 shadow-sm p-8 rounded-md guide">
-  <div class="flex items-center gap-4">
-    <div class="h-14 w-14 text-gray-800">
-<svg viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g transform="translate(-144.000000, -48.000000)">
-      <g transform="translate(144.000000, 48.000000)">
-        <rect fill-rule="nonzero" x="0" y="0" width="24" height="24"/>
-        <path d="M4,5 C4,3.34315 5.34315,2 7,2 L18,2 C19.1046,2 20,2.89543 20,4 L20,16.99 C20,17.1576 19.9623,17.3115 19.8872,17.4617 L19.3416,18.5528 C19.2009,18.8343 19.2009,19.1657 19.3416,19.4472 L19.8854,20.5348 C19.9586,20.6737 20,20.832 20,21 C20,21.5523 19.5523,22 19,22 L7,22 C5.34315,22 4,20.6569 4,19 L4,5 Z M7,18 L17.4076,18 C17.1789,18.6468 17.1789,19.3532 17.4076,20 L7,20 C6.44772,20 6,19.5523 6,19 C6,18.4477 6.44772,18 7,18 Z M10,7 C9.44772,7 9,7.44772 9,8 C9,8.55228 9.44772,9 10,9 L14,9 C14.5523,9 15,8.55228 15,8 C15,7.44772 14.5523,7 14,7 L10,7 Z" fill="currentColor"/>
-      </g>
-    </g>
-  </g>
-</svg>
-</div>
-    <div>
-      <div class="text-sm text-gray-500">http://app.gitbook.com/</div>
-      <a href="http://app.gitbook.com/" target="_blank">GitBook</a>
-    </div>
-  </div>
-</div>
+<p><code>SUMMARY.md</code> に <code>README.md</code> を含めないとビルドのエラーになる、タイトルなしのリンクにすると「Introduction」がサイドバーに出現する、見出しレベル2に属していないと直前の見出しグループに出現する...といった具合です。</p>
+<p><br></p>
+<div class="code-title">SUMMARY.md</div>
 
-<h2 id="手順">手順</h2>
-<p>「Synchronize with Git」メニューから、GitHub上で動作するアプリケーション「GitBook.com」をインストールします。</p>
+<pre><code class="lang-md"><span class="hljs-section">## グループ1</span>
+
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ1</span>](<span class="hljs-link">1.md</span>)
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ2</span>](<span class="hljs-link">2.md</span>)
+
+<span class="hljs-section"># グループなし</span>
+
+<span class="hljs-bullet">*</span> [](README.md)
+
+<span class="hljs-section">## グループ2</span>
+
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ1</span>](<span class="hljs-link">1.md</span>)
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ2</span>](<span class="hljs-link">2.md</span>)
+</code></pre>
 <figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
-  <a href="https://user-images.githubusercontent.com/15980747/193587479-0d156c8c-3acb-4c6e-a343-54a8b78af229.png" target="_blank">
-    <img alt src="https://user-images.githubusercontent.com/15980747/193587479-0d156c8c-3acb-4c6e-a343-54a8b78af229.png">
+  <a href="https://user-images.githubusercontent.com/15980747/193446774-18270725-d25a-44ce-8e08-df6772a02f9f.png" target="_blank">
+    <img alt src="https://user-images.githubusercontent.com/15980747/193446774-18270725-d25a-44ce-8e08-df6772a02f9f.png">
   </a>
-  <figcaption class="text-xs">Synchronize with Git</figcaption>
+  <figcaption class="text-xs">思わぬ位置にIntroductionが出現</figcaption>
 </figure>
 
-<p>リポジトリを選択するとファイルが自動で読み込まれ、Publishボタンで公開できます。</p>
-<figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
-  <a href="https://user-images.githubusercontent.com/15980747/193700134-94a1cf06-e2e3-44f7-bf11-9949a93715ef.png" target="_blank">
-    <img alt src="https://user-images.githubusercontent.com/15980747/193700134-94a1cf06-e2e3-44f7-bf11-9949a93715ef.png">
-  </a>
-  <figcaption class="text-xs">Publishボタンで公開</figcaption>
-</figure>
+<h2 id="解決策）readmeをリストのトップに移動する">解決策）READMEをリストのトップに移動する</h2>
+<p><code>README.md</code> を見出しレベルなしでリストのトップに追加します。このページへのリンクはマストのため何かしらタイトルをあてがう必要があります。</p>
+<p><br></p>
+<p>これだけなんですがけっこう悩みました。</p>
+<div class="code-title">SUMMARY.md</div>
 
-<h2 id="公開したサイト">公開したサイト</h2>
-<p><a href="https://yayoi-matsuoka.gitbook.io/handson-honkit" target="_blank">https://yayoi-matsuoka.gitbook.io/handson-honkit</a></p>
-<figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
-  <a href="https://user-images.githubusercontent.com/15980747/193593594-ac28e513-3481-44f3-be32-82e3e0883736.png" target="_blank">
-    <img alt src="https://user-images.githubusercontent.com/15980747/193593594-ac28e513-3481-44f3-be32-82e3e0883736.png">
-  </a>
-  <figcaption class="text-xs">Publishボタンで公開</figcaption>
-</figure>
+<pre><code class="lang-md"><span class="hljs-bullet">*</span> [<span class="hljs-string">トップページ</span>](<span class="hljs-link">README.md</span>)
 
-<p>カスタマイズしたCSSやパンくずなどのパーツは表示されず、URLはサイドバーの日本語がアルファベットに変換されました。ローカルと同じ見た目を再現するには設定をいろいろ変更しないと厳しそうです。</p>
+<span class="hljs-section">## グループ1</span>
+
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ1</span>](<span class="hljs-link">1.md</span>)
+<span class="hljs-bullet">-</span> [<span class="hljs-string">ページ2</span>](<span class="hljs-link">2.md</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -512,12 +502,12 @@
 
             
                 
-                <a href="../02-customize/2-5.html" class="navigation navigation-prev " aria-label="Previous page: サイト内検索">
+                <a href="4-1.html" class="navigation navigation-prev " aria-label="Previous page: tailwindcssのプリフライトが効かない">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="3-2.html" class="navigation navigation-next " aria-label="Next page: Firebase">
+                <a href="4-3.html" class="navigation navigation-next " aria-label="Next page: Nunjucksのコード補完がない">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -528,7 +518,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GitBook","updatedAt":"2022/10/03","level":"4.1","depth":1,"next":{"title":"Firebase","level":"4.2","depth":1,"path":"03-deploy/3-2.md","ref":"03-deploy/3-2.md","articles":[]},"previous":{"title":"サイト内検索","level":"3.5","depth":1,"path":"02-customize/2-5.md","ref":"02-customize/2-5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"03-deploy/3-1.md","mtime":"2022-10-03T23:45:17.026Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"サイドバーのIntroductionが消えない","updatedAt":"2022/10/02","level":"5.1.2","depth":2,"next":{"title":"Nunjucksのコード補完がない","level":"5.1.3","depth":2,"path":"04-issue/4-3.md","ref":"04-issue/4-3.md","articles":[]},"previous":{"title":"tailwindcssのプリフライトが効かない","level":"5.1.1","depth":2,"path":"04-issue/4-1.md","ref":"04-issue/4-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"04-issue/4-2.md","mtime":"2022-10-02T10:13:15.070Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T11:51:03.468Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -587,10 +577,6 @@
     
         
         <script src="../gitbook/@dogatana/honkit-plugin-search-plus/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
