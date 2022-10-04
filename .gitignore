@@ -1,3 +1,4 @@
 /node_modules
 .firebase/hosting.*.cache
 firebase-debug.log
+_serve/*
