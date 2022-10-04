@@ -415,17 +415,18 @@
 <br></p>
 </blockquote>
 <p>マクロは <code>関数名(引数, 引数...)</code> のように宣言します。</p>
+<p>「render」という関数を宣言してみましょう。</p>
 <div class="code-title">tips.html</div>
 
 <pre><code class="lang-html">{%- macro render(description=&quot;&quot;) %}
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;border p-8 flex&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-sm&quot;</span>&gt;</span>{{ description }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;border p-8 flex&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-sm&quot;</span>&gt;</span>{{ description }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {%- endmacro %}
 </code></pre>
 <h2 id="共有コンポーネントの呼び出し">共有コンポーネントの呼び出し</h2>
-<p>別ファイルで宣言したマクロを <code>import &quot;ファイル名&quot; as 変数</code> のように読み込んで呼び出します。</p>
+<p>別ファイルで宣言したマクロを <code>import &quot;ファイル名&quot; as エイリアス名</code> のように読み込んで呼び出します。</p>
 <div class="code-title">1.md</div>
 
 <pre><code class="lang-md">{% import &quot;./tips.html&quot; as tips %}
@@ -443,7 +444,7 @@
 <p>呼び出した場所で、マクロに書いたHTMLが展開されます。</p>
 <figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
   <a href="https://user-images.githubusercontent.com/15980747/193442512-41fc4eea-4453-4fbe-bd5c-18dcafbbc4a2.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/15980747/193442512-41fc4eea-4453-4fbe-bd5c-18dcafbbc4a2.png" alt>
+    <img alt src="https://user-images.githubusercontent.com/15980747/193442512-41fc4eea-4453-4fbe-bd5c-18dcafbbc4a2.png">
   </a>
   <figcaption class="text-xs">Tipsを設置した例</figcaption>
 </figure>
@@ -454,7 +455,6 @@
 <p>Numjucksのタグに <code>{%-</code> や <code>{{-</code> のようにハイフンを付けると空白を取り除いたHTMLを展開できるため、マークダウンにHTMLを埋め込む場合は付けておいたほうが無難です。</p>
 <p><br></p>
 <pre><code class="lang-md">{%- macro render(description=&quot;&quot;) %}
-...
 {%- endmacro %}
 
 {{- render(&quot;説明です&quot;) }}
@@ -535,7 +535,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"パーツの利用","updatedAt":"2022/10/02","level":"3.3","depth":1,"next":{"title":"ヘッダーの共通化","level":"3.4","depth":1,"path":"02-customize/2-4.md","ref":"02-customize/2-4.md","articles":[]},"previous":{"title":"パンくずリスト","level":"3.2","depth":1,"path":"02-customize/2-2.md","ref":"02-customize/2-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-3.md","mtime":"2022-10-02T10:09:05.917Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-03T23:44:13.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"パーツの利用","updatedAt":"2022/10/02","level":"3.3","depth":1,"next":{"title":"ヘッダーの共通化","level":"3.4","depth":1,"path":"02-customize/2-4.md","ref":"02-customize/2-4.md","articles":[]},"previous":{"title":"パンくずリスト","level":"3.2","depth":1,"path":"02-customize/2-2.md","ref":"02-customize/2-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-3.md","mtime":"2022-10-02T10:09:05.917Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

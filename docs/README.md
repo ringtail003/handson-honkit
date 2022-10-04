@@ -29,6 +29,8 @@ npm run honkit:serve
 
 記事をマークダウンで追加・編集します。
 
+ローカルのビルトインサーバーで変更内容をリアルタイムに確認できます。
+
 ### ![](https://icongr.am/octicons/package.svg?size=32&color=currentColor) ビルド
 
 ```shell
@@ -52,10 +54,10 @@ git push origin {repository}
 ...
 ```
 
-GitHub Actionを使って自動的にホスティングサービスにデプロイします。
+GitHub Actionを使ってホスティングサービスにデプロイします。
 
 ## メリット
 
-- 👍 開発者がいつでも気軽にセットアップできます
+- 👍 あれこれインストールする手間がなく簡単にセットアップできます
 - 👍 マークダウンで記事が書けます
 - 👍 変更のログがGitHubに残ります
