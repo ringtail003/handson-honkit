@@ -467,17 +467,17 @@
 <p>ベースのページにパンくずリストと記事コンテンツのブロックを設置します。</p>
 <div class="code-title">base.md</div>
 
-<pre><code class="lang-md">&lt;!-- パンくずリスト --&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span></span>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- パンくずリスト --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
   {%- block breadcrumbs %}
-<span class="hljs-code">    &lt;a href=&quot;/&quot;&gt;トップ&lt;/a&gt;
-    &lt;div class=&quot;icon&quot;&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;
-    &lt;a href=&quot;/group1/1.html&quot;&gt;グループ1&lt;/a&gt;
-    &lt;div class=&quot;icon&quot;&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>トップ<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/group1/1.html&quot;</span>&gt;</span>グループ1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   {%- endblock %}
-&lt;/nav&gt;
-</span>
-&lt;!-- 記事コンテンツ --&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- 記事コンテンツ --&gt;</span>
 {% block contents %}{% endblock %}
 </code></pre>
 <p>それぞれの記事はベースを継承し、パンくずリストの末尾に自身のタイトルを埋め込みます。</p>
@@ -512,7 +512,7 @@
 <p>パンくずの見た目をCSSで整えれば完成です。</p>
 <figure class="border border-gray-200 p-4 flex flex-col items-center my-10 text-white hover:text-gray-800">
   <a href="https://user-images.githubusercontent.com/15980747/193441826-4b2643b6-b20a-45d4-a441-52f7e89c5fd8.png" target="_blank">
-    <img src="https://user-images.githubusercontent.com/15980747/193441826-4b2643b6-b20a-45d4-a441-52f7e89c5fd8.png" alt>
+    <img alt src="https://user-images.githubusercontent.com/15980747/193441826-4b2643b6-b20a-45d4-a441-52f7e89c5fd8.png">
   </a>
   <figcaption class="text-xs">パンくずリストを設置した例</figcaption>
 </figure>
@@ -589,7 +589,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"パンくずリスト","updatedAt":"2022/10/02","level":"3.2","depth":1,"next":{"title":"パーツの利用","level":"3.3","depth":1,"path":"02-customize/2-3.md","ref":"02-customize/2-3.md","articles":[]},"previous":{"title":"tailwindcss","level":"3.1","depth":1,"path":"02-customize/2-1.md","ref":"02-customize/2-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-2.md","mtime":"2022-10-02T10:06:32.468Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-03T23:44:13.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"パンくずリスト","updatedAt":"2022/10/02","level":"3.2","depth":1,"next":{"title":"パーツの利用","level":"3.3","depth":1,"path":"02-customize/2-3.md","ref":"02-customize/2-3.md","articles":[]},"previous":{"title":"tailwindcss","level":"3.1","depth":1,"path":"02-customize/2-1.md","ref":"02-customize/2-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-2.md","mtime":"2022-10-02T10:06:32.468Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -401,6 +401,7 @@ npm ci
 <pre><code class="lang-shell">npm run honkit:serve
 </code></pre>
 <p>記事をマークダウンで追加・編集します。</p>
+<p>ローカルのビルトインサーバーで変更内容をリアルタイムに確認できます。</p>
 <h3 id="ビルド"><img src="https://icongr.am/octicons/package.svg?size=32&amp;color=currentColor" alt> ビルド</h3>
 <pre><code class="lang-shell">npm run honkit:build
 </code></pre>
@@ -412,10 +413,10 @@ npm ci
 <h3 id="あとはgithubにおまかせ"><img src="https://icongr.am/feather/github.svg?size=32&amp;color=currentColor" alt> あとはGitHubにおまかせ</h3>
 <pre><code class="lang-shell">...
 </code></pre>
-<p>GitHub Actionを使って自動的にホスティングサービスにデプロイします。</p>
+<p>GitHub Actionを使ってホスティングサービスにデプロイします。</p>
 <h2 id="メリット">メリット</h2>
 <ul>
-<li>👍 開発者がいつでも気軽にセットアップできます</li>
+<li>👍 あれこれインストールする手間がなく簡単にセットアップできます</li>
 <li>👍 マークダウンで記事が書けます</li>
 <li>👍 変更のログがGitHubに残ります</li>
 </ul>
@@ -486,7 +487,7 @@ npm ci
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"このサイトについて","level":"1.1","depth":1,"next":{"title":"開発環境","level":"2.1","depth":1,"path":"01-setup/1-1.md","ref":"01-setup/1-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"README.md","mtime":"2022-10-03T23:40:32.727Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-03T23:44:13.972Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"このサイトについて","level":"1.1","depth":1,"next":{"title":"開発環境","level":"2.1","depth":1,"path":"01-setup/1-1.md","ref":"01-setup/1-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus","livereload"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"livereload":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"README.md","mtime":"2022-10-04T02:38:35.242Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T03:47:52.572Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
