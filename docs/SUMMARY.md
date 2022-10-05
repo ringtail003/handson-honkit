@@ -26,3 +26,4 @@
   - [サイドバーのIntroductionが消えない](04-issue/4-2.md)
   - [Nunjucksのコード補完がない](04-issue/4-3.md)
   - [NunjucksをPrettierで整形すると崩れる](04-issue/4-4.md)
+  - [ビルトインサーバー起動のたびにdiffが大量に生成される](04-issue/4-5.md)

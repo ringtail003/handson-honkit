@@ -11,6 +11,7 @@ HonKitを使った開発はすべてがスムーズに進んだわけではな�
   <a href="/04-issue/4-2.md" class="py-4">サイドバーのIntroductionが消えない😢</a>
   <a href="/04-issue/4-3.md" class="py-4">Nunjucksのコード補完がない😢</a>
   <a href="/04-issue/4-4.md" class="py-4">NunjucksをPrettierで整形すると崩れる😢</a>
+  <a href="/04-issue/4-5.md" class="py-4">ビルトインサーバー起動のたびにdiffが大量に生成される😢</a>
 </div>
 
 
