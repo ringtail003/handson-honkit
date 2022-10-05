@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>tailwindcss · handson-honkit</title>
+        <title>Tailwindcss · handson-honkit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 4.0.0">
@@ -151,7 +151,7 @@
                 <a href="2-1.html">
             
                     
-                    tailwindcss
+                    Tailwindcss
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="../04-issue/4-1.html">
             
                     
-                    tailwindcssのプリフライトが効かない
+                    Tailwindcssのプリフライトが効かない
             
                 </a>
             
@@ -310,6 +310,19 @@
             
                     
                     NunjucksをPrettierで整形すると崩れる
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../04-issue/4-5.html">
+            
+                <a href="../04-issue/4-5.html">
+            
+                    
+                    ビルトインサーバー起動のたびにdiffが大量に生成される
             
                 </a>
             
@@ -395,25 +408,26 @@
   </g>
 </svg>
 </div>
-  <span>tailwindcss</span>
+  <span>Tailwindcss</span>
 </nav>
 
 <div class="flex justify-between items-center">
-  <h1 class="text-2xl font-bold flex-1" id="tailwindcss">tailwindcss</h1>
+  <h1 class="text-2xl font-bold flex-1" id="tailwindcss">Tailwindcss</h1>
 
-    <span class="text-xs whitespace-nowrap">更新日：2022/10/03</span>
+    <span class="text-xs whitespace-nowrap">更新日：2022/10/05</span>
 
 </div>
 
 
 <p>この章では、デフォルトで用意された機能をカスタマイズした手順を紹介します。</p>
-<p>CSSをイチから書くのが面倒なので、tailwindcssを導入しました。</p>
+<p>CSSをイチから書くのが面倒なので、Tailwindcssを導入しました。</p>
 <h2 id="セットアップ">セットアップ</h2>
 <pre><code>npm install tailwindcss --save-dev
-</code></pre><p>tailwindcssの設定ファイルを作成します。HonKitの記事は <code>.md</code> または <code>.html</code> で書くので、これらのファイルのCSSクラスがビルドに含まれるよう設定しておきます。</p>
+</code></pre><p>Tailwindcssの設定ファイルを作成します。</p>
 <p><br></p>
 <pre><code>./node_modules/.bin/tailwind init
-</code></pre><div class="code-title">tailwind.config.js</div>
+</code></pre><p>HonKitの記事は <code>.md</code> または <code>.html</code> で書くので、これらのファイルを読み込んでビルドするよう設定します。</p>
+<div class="code-title">tailwind.config.js</div>
 
 <pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
   <span class="hljs-attr">content</span>: [
@@ -441,7 +455,7 @@
   ...
 </code></pre>
 <h2 id="読み込み">読み込み</h2>
-<p>HonKitの設定ファイル <code>book.json</code> でtailwindcssのビルドファイルを読み込むようにします。
+<p>HonKitの設定ファイル <code>book.json</code> でTailwindcssのビルドファイルを読み込むようにします。
 <br>
 <br></p>
 <pre><code>touch book.json
@@ -460,7 +474,7 @@
 <br></p>
 </blockquote>
 <h2 id="cssを使う">CSSを使う</h2>
-<p>設定が完了すれば、いつもどおりtailwindcssのCSSクラスが使えるようになります。</p>
+<p>設定が完了すれば、いつもどおりTailwindcssのCSSクラスが使えるようになります。</p>
 <div class="code-title">test.md</div>
 
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray-200 p-8 rounded-lg&quot;</span>&gt;</span>テスト<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -469,7 +483,7 @@
   <a href="https://user-images.githubusercontent.com/15980747/193439595-c58e84b0-e214-431b-8223-8be34929cca7.png" target="_blank">
     <img alt src="https://user-images.githubusercontent.com/15980747/193439595-c58e84b0-e214-431b-8223-8be34929cca7.png">
   </a>
-  <figcaption class="text-xs">tailwindcssのCSSクラスが適用された例</figcaption>
+  <figcaption class="text-xs">TailwindcssのCSSクラスが適用された例</figcaption>
 </figure>
 
 
@@ -544,7 +558,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"tailwindcss","updatedAt":"2022/10/03","level":"3.1","depth":1,"next":{"title":"パンくずリスト","level":"3.2","depth":1,"path":"02-customize/2-2.md","ref":"02-customize/2-2.md","articles":[]},"previous":{"title":"記事を追加","level":"2.3","depth":1,"path":"01-setup/1-3.md","ref":"01-setup/1-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-1.md","mtime":"2022-10-03T12:38:00.571Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-04T11:51:03.468Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tailwindcss","updatedAt":"2022/10/05","level":"3.1","depth":1,"next":{"title":"パンくずリスト","level":"3.2","depth":1,"path":"02-customize/2-2.md","ref":"02-customize/2-2.md","articles":[]},"previous":{"title":"記事を追加","level":"2.3","depth":1,"path":"01-setup/1-3.md","ref":"01-setup/1-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","@dogatana/honkit-plugin-search-plus"],"root":"./docs","styles":{"website":"./dist.css"},"pluginsConfig":{"@dogatana/honkit-plugin-search-plus":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"handson-honkit","gitbook":"*"},"file":{"path":"02-customize/2-1.md","mtime":"2022-10-05T12:21:43.746Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2022-10-05T12:55:28.062Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
